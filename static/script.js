@@ -9,7 +9,7 @@ document.getElementById("predictButton").addEventListener("click", function() {
         repair_hours: parseFloat(document.getElementById("repair_hours").value),
         repair_complexity: parseInt(document.getElementById("repair_complexity").value),
     };
-    fetch('https://modeltry.zeabur.app/predict', {  // Flask 端點
+    fetch('https://cv.zeabur.app/predict', {  // Flask 端點
         method: "POST",
         headers: {
             "Content-Type": "application/json"
