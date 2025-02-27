@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Wen Hao Chung - Portfolio</title>
+    
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/media-queries.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:400,800" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body data-spy="scroll">
+
+<!-- Navigation -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#home">Wen Hao Chung</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container content" id="home">
+    <!-- Home Section -->
+    <div class="row-fluid">
+        <div class="span7">
+            <div id="app-name">
+                <h1>Wen Hao Chung</h1>
+            </div>
+            <div id="tagline">
+                Data Analyst | AI Enthusiast | Problem Solver
+            </div>
+            <div id="description">
+                <p>Turning complex data into actionable insights with Python, SQL, and Machine Learning</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Section -->
+    <div class="row-fluid" id="resume">
+        <h2 class="page-title">Resume</h2>
+        
+        <div class="span12">
+            <h3>Career Objective</h3>
+            <p>Detail-oriented data analyst with expertise in statistical analysis and healthcare data. Experienced in managing multi-million record datasets and delivering strategic insights.</p>
+
+            <h3>Education</h3>
+            <h4>British Columbia Institute of Technology</h4>
+            <p>Certificate in Applied Data Analytics</p>
+            <ul>
+                <li>Python, SQL, R, Power BI</li>
+                <li>Data lifecycle management</li>
+            </ul>
+
+            <h4>National Chengchi University</h4>
+            <p>MSc in Statistics</p>
+            <ul>
+                <li>Thesis: Aging population impact analysis using 2M+ healthcare records</li>
+            </ul>
+
+            <h3>Professional Experience</h3>
+            <h4>Cathay Life Insurance</h4>
+            <ul>
+                <li>Analyzed 2M+ health records to identify regional disease patterns</li>
+                <li>Developed innovative mortality determination criteria</li>
+            </ul>
+
+            <h4>BNP Paribas Assurance</h4>
+            <ul>
+                <li>Managed $3M project portfolio budget</li>
+                <li>Optimized vendor management processes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="row-fluid" id="portfolio">
+        <h2 class="page-title">Portfolio</h2>
+        
+        <div class="span12">
+            <h3>Insurance Claim Prediction Model</h3>
+            <div class="project-details">
+                <h4>Objective</h4>
+                <p>Develop Logistic Regression model to predict claim approvals using vehicle and repair data.</p>
+
+                <h4>Methodology</h4>
+                <ul>
+                    <li>Processed 32,258 records with 23 features</li>
+                    <li>Feature engineering using SMOTE and Robust Scaling</li>
+                    <li>Model optimization with K-Fold validation</li>
+                </ul>
+
+                <h4>Technical Highlights</h4>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h5>Key Features</h5>
+                        <ul>
+                            <li>Repair Cost</li>
+                            <li>Vehicle Model Frequency</li>
+                            <li>Manufacturer Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="span6">
+                        <h5>Model Performance</h5>
+                        <ul>
+                            <li>Accuracy: 89.2%</li>
+                            <li>Recall: 91.5%</li>
+                            <li>F1 Score: 90.3%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4>System Architecture</h4>
+                <pre>
+                    <h1>理賠預測系統</h1>
+                    <div class="input-container">
+                        <label>車輛類別異常 (0 或 1): <input type="number" id="category_anomaly"></label>
+                        <label>廠牌 (Ford/Dacia): <input type="text" id="Maker"></label>
+                        <label>車型: <input type="text" id="Model"></label>
+                        <label>座位數 (2-20): <input type="number" id="Seat_num"></label>
+                    </div>
+                    <div class="input-container">
+                        <label>車門數 (2-7): <input type="number" id="Door_num"></label>
+                        <label>維修費用: <input type="number" id="repair_cost"></label>
+                        <label>維修時間: <input type="number" id="repair_hours"></label>
+                        <label>維修複雜度 (1-4): <input type="number" id="repair_complexity"></label>
+                    </div>
+                    <div class="button-container">
+                        <button id="predictButton">預測</button>
+                        <p id="result"></p>
+                        <p id="error"></p>
+                    </div>
+                    <script src="static/script.js"></script>
+                </pre>
+                <h4>Figures</h4>
+
+<!-- Figure 8 -->
+<div class="figure-container">
+    <img src="static/fig8_correlation_y.png" alt="Figure 8: Correlation between Y and predictors">
+    <p><strong>Figure 8.</strong> Correlation between Y and predictors</p>
+</div>
+
+<!-- Figure 9 -->
+<div class="figure-container">
+    <img src="static/fig9_correlation_all.png" alt="Figure 9: Correlation between all variables">
+    <p><strong>Figure 9.</strong> Correlation between all variables</p>
+</div>
+
+<!-- Explanation -->
+<div class="explanation">
+    <p>The variable <strong>category_anomaly</strong> has the highest correlation with Y. Additionally, <strong>Model_FreqEncoded</strong> and <strong>Maker_Ford</strong> are highly correlated, and <strong>repair_complexity</strong> also has a strong correlation with Maker_Ford. Therefore, <strong>category_anomaly, Model_FreqEncoded, Maker_Ford,</strong> and <strong>repair_complexity</strong> will be included in the Model Evaluation to run experiments and determine which combination yields the highest accuracy.</p>
+</div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Footer -->
+<div class="footer container">
+    <div id="copyright">
+        &copy; 2023 Wen Hao Chung. All rights reserved.
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script>
+$(document).ready(function(){
+    // Smooth scrolling
+    $('a[href^="#"]').on('click', function(event) {
+        event.preventDefault();
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 50
+            }, 1000);
+        }
+    });
+
+    // Mobile menu toggle
+    $('.btn-navbar').click(function(){
+        $('.nav-collapse').toggleClass('in');
+    });
+});
+</script>
+
+</body>
+</html>
